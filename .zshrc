@@ -20,7 +20,7 @@ setopt EXTENDED_HISTORY
 function history-all { history -E 1 }
 
 # プロンプト設定
-prompt='%U%B%F{white}%K{cyan}[%h]__anoooo%%%C%k%f%b%u '
+prompt='%U%B%F{white}%K{cyan}[%h]__anoooo%%%k%f%b%u '
 
 # lsの色
 export LSCOLORS=exfxcxdxbxegedabagacad
@@ -34,11 +34,9 @@ zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'c
 # alias
 # general
 alias -g cdl='cdl'
-function cdl () {
-  \cd "$@" && ls
-}
+function cdl(){\cd "$@" && ls}
 alias -g szr='source ~/.zshrc'
-alias -g v='vagrant "$*"'
+function v(){vagrant "$*"}
 alias -g railsv='cdl /Users/saeki/Vagrant/Rails/'
 alias -g railss='cdl /Users/saeki/Vagrant/Rails/workspace/rails/'
 #vim
@@ -47,12 +45,8 @@ alias -g vzr='vim ~/.zshrc'
 # git
 alias -g gb='git branch -a'
 alias -g gst='git status -sb'
-function gcmm() {
-  git commit -m "$*"
-}
-function gcmam() {
-  git commit -am "$*"
-}
+function gcmm(){git commit -m "$*"}
+function gcmam(){git commit -am "$*"}
 alias -g glgg='git logg'
 alias -g glggr='git loggr'
 alias -g glg='git logg | head'
