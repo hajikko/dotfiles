@@ -1,5 +1,7 @@
 # path
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.profile
+
+#rbenv
 
 autoload -Uz colors; colors
 
@@ -42,6 +44,7 @@ alias -g railss='cdl /Users/saeki/Vagrant/Rails/workspace/rails/'
 #vim
 alias -g vgc='vim ~/.gitconfig'
 alias -g vzr='vim ~/.zshrc'
+alias -g vvr='sudo vim ~/.vimrc'
 # git
 alias -g gb='git branch -a'
 alias -g gst='git status -sb'

@@ -1,8 +1,35 @@
+"####基本設定####
+"ターミナル接続を高速にする
+set ttyfast
+
+"ターミナルで256色表示を使う
+set t_Co=256
+
+"複数ファイルの編集を可能にする
+set hidden
+
+"内容が変更されたら自動的に再読み込み
+set autoread
+
+"####Format####
+"自動インデントを有効化する
+set smartindent
+set autoindent
+
+"括弧の対応をハイライト
+set showmatch
+
+"####LOOK&Feel####
+"ルーラー,行番号を表示
+set ruler
+set number
+
+"ファイルタイプに応じて挙動,色を変える
+syntax on
+
+
+
 "####表示設定######
-set number "行番号の表示
-set title "ファイル名を表示
-set showmatch "括弧入力時の対応する括弧を表示
-syntax on "コードの色分け
 set tabstop=2 "インデントをスペース4つ分に設定
 
 "####検索設定######
