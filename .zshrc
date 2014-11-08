@@ -28,10 +28,8 @@ prompt='%U%B%F{white}%K{cyan}[%h]__anoooo%%%k%f%b%u '
 # lsの色
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-
 alias ls="ls -GF"
 alias gls="gls --color"
-
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 # alias
@@ -42,6 +40,7 @@ alias -g szr='source ~/.zshrc'
 function v(){vagrant "$*"}
 alias -g railsv='cdl /Users/saeki/Vagrant/Rails/'
 alias -g railss='cdl /Users/saeki/Vagrant/Rails/workspace/rails/'
+alias -g b='cd -'
 #vim
 alias -g vgc='vim ~/.gitconfig'
 alias -g vzr='vim ~/.zshrc'
