@@ -3,7 +3,6 @@ source ~/.profile
 export PATH="/usr/local/bin:$PATH"
 
 #rbenv
-
 autoload -Uz colors; colors
 
 # もしかして機能
@@ -41,10 +40,10 @@ function v(){vagrant "$*"}
 alias -g railsv='cdl /Users/saeki/Vagrant/Rails/'
 alias -g railss='cdl /Users/saeki/Vagrant/Rails/workspace/rails/'
 alias -g b='cd -'
-#vim
+# vim
 alias -g vgc='vim ~/.gitconfig'
 alias -g vzr='vim ~/.zshrc'
-alias -g vvr='sudo vim ~/.vimrc'
+alias -g vvr='vim ~/.vimrc'
 # git
 alias -g gb='git branch -a'
 alias -g gst='git status -sb'

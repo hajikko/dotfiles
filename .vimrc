@@ -35,3 +35,28 @@ set tabstop=2 "インデントをスペース4つ分に設定
 "####検索設定######
 set smartcase "小文字大文字の区別
 set wrapscan "繰り返し検索
+
+"####NeoBundle設定####
+set nocompatible
+filetype plugin indent off
+
+if has('vim_starting')
+				  set runtimepath+=~/.vim/bundle/neobundle.vim
+					call neobundle#begin(expand('~/.vim/bundle/'))
+					NeoBundleFetch 'Shougo/neobundle.vim'
+					call neobundle#end()
+						endif 
+
+						NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'drillbits/nyan-modoki.vim'
+
+filetype plugin indent on
+
+"nyan-modoki
+set laststatus=2
+set statusline=%F%m%r%h%w[%{&ff}]%=%{g:NyanModoki()}(%l,%c)[%P]
+let g:nyan_modoki_select_cat_face_number = 4 
+let g:nayn_modoki_animation_enabled= 1
