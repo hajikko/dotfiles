@@ -2,7 +2,7 @@
 source ~/.profile
 export PATH="/usr/local/bin:$PATH"
 
-#rbenv
+# rbenv
 autoload -Uz colors; colors
 
 # もしかして機能
