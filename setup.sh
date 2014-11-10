@@ -11,4 +11,3 @@ ln -sf ~/dotfiles/.gitignore ~/.gitignore
 ln -sf ~/dotfiles/.vim ~/.vim
 ln -sf ~/dotfiles/.profile ~/.profile
 ln -sf ~/dotfiles/.zsh_profile ~/.zsh_profile
-ln -sf ~/dotfiles/.zsh_history ~/.zsh_history
