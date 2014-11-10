@@ -8,3 +8,4 @@ ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zsh_history ~/.zsh_history
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
 ln -sf ~/dotfiles/.gitignore ~/.gitignore
+ln -sf ~/dotfiles/.vim ~/.vim

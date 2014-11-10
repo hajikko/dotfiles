@@ -37,8 +37,11 @@ alias -g cdl='cdl'
 function cdl(){\cd "$@" && ls}
 alias -g szr='source ~/.zshrc'
 function v(){vagrant "$*"}
+case ${OSTYPE} in
+				darwin*)
 alias -g railsv='cdl /Users/saeki/Vagrant/Rails/'
 alias -g railss='cdl /Users/saeki/Vagrant/Rails/workspace/rails/'
+esac
 alias -g b='cd -'
 # vim
 alias -g vgc='vim ~/.gitconfig'
