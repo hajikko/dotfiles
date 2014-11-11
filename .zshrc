@@ -5,16 +5,16 @@ export PATH="/usr/local/bin:$PATH"
 # rbenv
 autoload -Uz colors; colors
 
-# もしかして機能
-# setopt correct
+# もしかして
+setopt correct
 
 # history
 # 履歴ファイルの保存先
 export HISTFILE=${HOME}/.zsh_history
 # メモリに保存される履歴の件数
-export HISTSIZE=1000
+export HISTSIZE=10000
 # 履歴ファイルに保存される履歴の件数
-export SAVEHIST=100000
+export SAVEHIST=10000
 # 重複を記録しない
 setopt hist_ignore_dups
 # 開始と終了を記録
@@ -22,7 +22,7 @@ setopt EXTENDED_HISTORY
 function history-all { history -E 1 }
 
 # プロンプト設定
-prompt='%U%B%F{white}%K{cyan}[%h]__anoooo%%%k%f%b%u '
+prompt='%U%B%F{white}%K{cyan}[%h]anooooooo%%%k%f%b%u '
 
 # lsの色
 export LSCOLORS=exfxcxdxbxegedabagacad
