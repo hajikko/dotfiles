@@ -13,8 +13,9 @@ set autoread
 
 "####Format####
 "自動インデントを有効化する
-set smartindent
-set autoindent
+"set smartindent
+"set autoindent
+set noautoindent
 
 "括弧の対応をハイライト
 set showmatch
