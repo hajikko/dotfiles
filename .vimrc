@@ -13,9 +13,11 @@ set autoread
 
 "####Format####
 "自動インデントを有効化する
-"set smartindent
-"set autoindent
-set noautoindent
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set smartindent
 
 "括弧の対応をハイライト
 set showmatch
@@ -27,11 +29,6 @@ set number
 
 "ファイルタイプに応じて挙動,色を変える
 syntax on
-
-
-
-"####表示設定######
-set tabstop=2 "インデントをスペース4つ分に設定
 
 "####検索設定######
 set smartcase "小文字大文字の区別
