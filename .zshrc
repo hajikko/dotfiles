@@ -56,3 +56,4 @@ alias -g glgg='git logg'
 alias -g glggr='git loggr'
 alias -g glg='git logg | head'
 alias -g gd='git diff'
+alias -g gcb="git co -b"
