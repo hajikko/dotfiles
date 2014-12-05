@@ -49,6 +49,7 @@ alias -g vzr='vim ~/.zshrc'
 alias -g vvr='vim ~/.vimrc'
 # git
 alias -g gb='git branch -a'
+alias -g gbd='git branch -d'
 alias -g gst='git status -sb'
 function gcmm(){git commit -m "$*"}
 function gcmam(){git commit -am "$*"}
