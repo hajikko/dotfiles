@@ -3,7 +3,11 @@ source ~/.profile
 export PATH="/usr/local/bin:$PATH"
 
 # rbenv
-autoload -Uz colors; colors
+eval "$(rbenv init -)"
+
+# pyevn
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 
 # もしかして
 setopt correct
@@ -23,6 +27,7 @@ function history-all { history -E 1 }
 
 # プロンプト設定
 prompt='%U%B%F{white}%K{cyan}[%h]anooooooo%%%k%f%b%u '
+autoload -Uz colors; colors
 
 # lsの色
 export LSCOLORS=exfxcxdxbxegedabagacad
@@ -37,12 +42,10 @@ alias -g cdl='cdl'
 function cdl(){\cd "$@" && ls}
 alias -g szr='source ~/.zshrc'
 function v(){vagrant "$*"}
-case ${OSTYPE} in
-				darwin*)
 alias -g railsv='cdl /Users/saeki/Vagrant/Rails/'
 alias -g railss='cdl /Users/saeki/Vagrant/Rails/workspace/rails/'
-esac
 alias -g b='cd -'
+function p(){cdl ~/Vagrant/"$@";}
 # vim
 alias -g vgc='vim ~/.gitconfig'
 alias -g vzr='vim ~/.zshrc'
