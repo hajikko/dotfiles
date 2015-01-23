@@ -10,7 +10,7 @@
 	co = checkout
 	st = status
 	br = branch
-        logg = log --stat --pretty=format:'%Cblue%h%Creset %Cgreen%ar$Creset %Cred%an%Creset %s %Cred%d%Creset'
-        loggr = log --graph --date-order --pretty=format:'%Cblue%h %Cgreen%ci %Cred%an %Cblue%m %Creset%s %Cred%d'
+	logg = log --stat --pretty=format:'%Cblue%h%Creset %Cgreen%ar$Creset %Cred%an%Creset %s %Cred%d%Creset'
+	loggr = log --graph --date-order --pretty=format:'%Cblue%h %Cgreen%ci %Cred%an %Cblue%m %Creset%s %Cred%d'
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
