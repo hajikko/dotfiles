@@ -2,7 +2,8 @@
 	name = saeki
 	email = s.saeki71@gmail.com
 [core]
-        excludesfile = /Users/saeki/.gitignore
+	excludesfile = /Users/saeki/.gitignore
+	editor = /usr/bin/vim
 [color]
 	ui = true
 [alias]
