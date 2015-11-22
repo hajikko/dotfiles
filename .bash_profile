@@ -16,7 +16,7 @@ alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resour
 eval "$(rbenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
-source '/Users/saeki/google-cloud-sdk/path.bash.inc'
+source '~/google-cloud-sdk/path.bash.inc'
 
 # The next line enables bash completion for gcloud.
-source '/Users/saeki/google-cloud-sdk/completion.bash.inc'
+source '~/google-cloud-sdk/completion.bash.inc'
