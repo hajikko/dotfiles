@@ -1,7 +1,7 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/saeki/.rvm'
-let g:netrw_dirhist_2='/Users/saeki/Vagrant/Rails/workspace/rails/sample_app'
-let g:netrw_dirhist_3='/Users/saeki/Vagrant/Rails/workspace/rails/sample_app/app/views/static_pages'
-let g:netrw_dirhist_4='/Users/saeki/dotfiles/.vim'
-let g:netrw_dirhist_5='/Users/saeki/study/tmp/index.html'
+let g:netrw_dirhist_1='/Users/saeki/Vagrant/asahi_cycle'
+let g:netrw_dirhist_2='/Users/saeki/Vagrant/asahi_cycle/cookbooks/httpd/templates/default'
+let g:netrw_dirhist_3='/Users/saeki/Vagrant/asahi_cycle/.git'
+let g:netrw_dirhist_4='/Users/saeki/work/goalous2/cookbooks/php_nginx'
+let g:netrw_dirhist_5='/Users/saeki/dotfiles/.vim/bundle/nyan-modoki.vim'

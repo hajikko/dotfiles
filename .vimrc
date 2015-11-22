@@ -12,21 +12,15 @@ set hidden
 set autoread
 
 "####Format####
-"自動インデントを有効化する
-set expandtab
-set shiftwidth=2
-set softtabstop=2
 set autoindent
 set smartindent
 
 "タブの設定
 " タブを表示するときの幅
-set tabstop=4
+set tabstop=2
 " タブを挿入するときの幅
-set shiftwidth=4
-" タブをタブとして扱う(スペースに展開しない)
-set noexpandtab
-" 
+set shiftwidth=2
+set expandtab
 set softtabstop=0
 
 "括弧の対応をハイライト

@@ -14,3 +14,9 @@ export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH="$HOME/.rbenv/bin:$PATH"
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
 eval "$(rbenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/saeki/google-cloud-sdk/path.bash.inc'
+
+# The next line enables bash completion for gcloud.
+source '/Users/saeki/google-cloud-sdk/completion.bash.inc'
