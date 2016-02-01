@@ -56,7 +56,6 @@ function v(){vagrant "$*"}
 function b(){cd -;}
 function p(){cdl ~/Vagrant/"$@";}
 function g(){cdl ~/work/goalous2;}
-function sq(){cdl ~/Vagrant/asahi_cycle;}
 # vim
 alias -g vgc='vim ~/.gitconfig'
 alias -g vzr='vim ~/.zshrc'
