@@ -1,11 +1,7 @@
 # path
 source ~/.profile
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-# rbenv
-eval "$(rbenv init -)"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -16,7 +12,7 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 unsetopt correct
 
 # エラーメッセージカスタマイズ
-function command_not_found_handler() {echo "(」・ω・)」うー！(／・ω・)／にゃー！→ 「$1 」";}
+function command_not_found_handler() {echo "\n\e[1;41m(」・ω・)」うー！(／・ω・)／にゃー！→ 「$1 」\n";}
 
 # history
 # 履歴ファイルの保存先
