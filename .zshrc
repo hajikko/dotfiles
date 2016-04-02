@@ -32,7 +32,7 @@ setopt EXTENDED_HISTORY
 function history-all { history -E 1 }
 
 # プロンプト設定
-prompt='%U%B%F{white}%K{cyan}[%h]%k%K{magenta}[%*]%k%K{green}saekis$%k%f%b%u '
+prompt=$'%{\e[$[32+$RANDOM % 5]m%}%U%B%F{white}%K{cyan}[%h]%k%K{magenta}[%*]%k%K{green}saekis$%k%f%b%u '
 # autoload -Uz colors; colors
 
 # lsの色
