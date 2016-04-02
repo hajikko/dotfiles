@@ -2,7 +2,7 @@
 source ~/.profile
 export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/.rbenv/shims:$PATH"
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
+export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # rbenv
 eval "$(rbenv init -)"
@@ -11,14 +11,9 @@ eval "$(rbenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-# google cloud
-export GCP_ROOT="$HOME/google-cloud-sdk"
-export PATH="$GCP_ROOT/bin:$PATH"
-
 # もしかして
 # setopt correct
 unsetopt correct
-
 
 # エラーメッセージカスタマイズ
 function command_not_found_handler() {echo "(」・ω・)」うー！(／・ω・)／にゃー！→ 「$1 」";}
@@ -37,8 +32,8 @@ setopt EXTENDED_HISTORY
 function history-all { history -E 1 }
 
 # プロンプト設定
-prompt='%U%B%F{white}%K{cyan}[%h]saeki%%%k%f%b%u '
-autoload -Uz colors; colors
+prompt='%U%B%F{white}%K{cyan}[%h]%k%K{magenta}[%*]%k%K{green}saekis$%k%f%b%u '
+# autoload -Uz colors; colors
 
 # lsの色
 export LSCOLORS=exfxcxdxbxegedabagacad
@@ -46,6 +41,47 @@ export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46
 alias ls="ls -GF"
 alias gls="gls --color"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
+
+# ----- PROMPT -----
+autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
+
+function rprompt-git-current-branch {
+        local name st color gitdir action
+        if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
+                return
+        fi
+
+        name=`git rev-parse --abbrev-ref=loose HEAD 2> /dev/null`
+        if [[ -z $name ]]; then
+                return
+        fi
+
+        gitdir=`git rev-parse --git-dir 2> /dev/null`
+        action=`VCS_INFO_git_getaction "$gitdir"` && action="($action)"
+
+  if [[ -e "$gitdir/rprompt-nostatus" ]]; then
+    echo "$name$action "
+    return
+  fi
+
+        st=`git status 2> /dev/null`
+  if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
+    color=%F{green}
+  elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
+    color=%F{yellow}
+  elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
+                color=%B%F{red}
+        else
+                color=%F{red}
+        fi
+
+        echo "$color$name$action%f%b "
+}
+
+# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
+setopt prompt_subst
+
+RPROMPT='[`rprompt-git-current-branch`%~]'
 
 # alias
 # general
