@@ -2,10 +2,15 @@
 source ~/.profile
 export PATH="/usr/local/bin:$PATH"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="/usr/local/sbin:$PATH"
 
 # pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
 
 # もしかして
 # setopt correct
@@ -27,10 +32,6 @@ setopt hist_ignore_dups
 setopt EXTENDED_HISTORY
 function history-all { history -E 1 }
 
-# プロンプト設定
-prompt=$'%{\e[$[32+$RANDOM % 5]m%}%U%B%F{white}%K{cyan}[%h]%k%K{magenta}[%*]%k%K{green}saekis$%k%f%b%u '
-autoload -Uz colors; colors
-
 # lsの色
 export LSCOLORS=exfxcxdxbxegedabagacad
 export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
@@ -39,6 +40,9 @@ alias gls="gls --color"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
 # ----- PROMPT -----
+prompt=$'%{\e[$[32+$RANDOM % 5]m%} %U%B%F{white}%K{cyan}[%h]%k%K{magenta}[%*]%k%K{green}saekis$%k%f%b%u '
+
+autoload -Uz colors; colors
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
  
 function rprompt-git-current-branch {
@@ -85,6 +89,7 @@ alias -g cdl='cdl'
 function cdl(){\cd "$@" && ls}
 alias -g szr='source ~/.zshrc'
 function v(){vagrant "$*"}
+function gom(){gommit-m "$*"}
 function b(){cd -;}
 function p(){cdl ~/Vagrant/"$@";}
 function g(){cdl ~/work/goalous2;}
