@@ -1,1 +1,0 @@
-/Users/saeki/dotfiles/.vim

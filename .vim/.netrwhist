@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/Users/saeki/Vagrant/asahi_cycle'
-let g:netrw_dirhist_2='/Users/saeki/Vagrant/asahi_cycle/cookbooks/httpd/templates/default'
-let g:netrw_dirhist_3='/Users/saeki/Vagrant/asahi_cycle/.git'
-let g:netrw_dirhist_4='/Users/saeki/work/goalous2/cookbooks/php_nginx'
-let g:netrw_dirhist_5='/Users/saeki/dotfiles/.vim/bundle/nyan-modoki.vim'
-let g:netrw_dirhist_6='/Users/saekis/work/goalous2/app/webroot/js/react/setup_guide'

@@ -39,9 +39,6 @@ alias ls="ls -GF"
 alias gls="gls --color"
 zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
 
-# ----- PROMPT -----
-prompt=$'%{\e[$[32+$RANDOM % 5]m%} %U%B%F{white}%K{cyan}[%h]%k%K{magenta}[%*]%k%K{green}saekis$%k%f%b%u '
-
 autoload -Uz colors; colors
 autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
  
