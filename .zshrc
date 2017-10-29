@@ -1,16 +1,8 @@
-# path
-source ~/.profile
-export PATH="/usr/local/bin:$PATH"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH="/usr/local/sbin:$PATH"
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
-# go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOPATH/bin
+# oh-my-zsh
+export ZSH=/Users/saekis/dotfiles/oh-my-zsh
+ZSH_THEME="avit"
+plugins=(git ruby bundler osx rake rails emoji-clock)
+source $ZSH/oh-my-zsh.sh
 
 # もしかして
 # setopt correct
@@ -31,54 +23,6 @@ setopt hist_ignore_dups
 # 開始と終了を記録
 setopt EXTENDED_HISTORY
 function history-all { history -E 1 }
-
-# lsの色
-export LSCOLORS=exfxcxdxbxegedabagacad
-export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
-alias ls="ls -GF"
-alias gls="gls --color"
-zstyle ':completion:*' list-colors 'di=34' 'ln=35' 'so=32' 'ex=31' 'bd=46;34' 'cd=43;34'
-
-autoload -Uz colors; colors
-autoload -Uz VCS_INFO_get_data_git; VCS_INFO_get_data_git 2> /dev/null
- 
-function rprompt-git-current-branch {
-  local name st color gitdir action
-  if [[ "$PWD" =~ '/\.git(/.*)?$' ]]; then
-    return
-  fi
- 
-  name=`git rev-parse --abbrev-ref=loose HEAD 2> /dev/null`
-  if [[ -z $name ]]; then
-    return
-  fi
- 
-  gitdir=`git rev-parse --git-dir 2> /dev/null`
-  action=`VCS_INFO_git_getaction "$gitdir"` && action="($action)"
-
-  if [[ -e "$gitdir/rprompt-nostatus" ]]; then
-    echo "$name$action "
-    return
-  fi
- 
-  st=`git status 2> /dev/null`
-  if [[ -n `echo "$st" | grep "^nothing to"` ]]; then
-    color=%F{green}
-  elif [[ -n `echo "$st" | grep "^nothing added"` ]]; then
-    color=%F{yellow}
-  elif [[ -n `echo "$st" | grep "^# Untracked"` ]]; then
-    color=%B%F{red}
-  else
-    color=%F{red}
-  fi
-
-  echo "$color$name$action%f%b "
-}
- 
-# プロンプトが表示されるたびにプロンプト文字列を評価、置換する
- setopt prompt_subst
- 
-RPROMPT='[`rprompt-git-current-branch`%~]'
 
 # alias
 # general
