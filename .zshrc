@@ -1,8 +1,12 @@
 # oh-my-zsh
-export ZSH=/Users/saekis/dotfiles/oh-my-zsh
+export ZSH="$HOME/dotfiles/oh-my-zsh"
 ZSH_THEME="avit"
 plugins=(git ruby bundler osx rake rails emoji-clock)
 source $ZSH/oh-my-zsh.sh
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH" 
+eval "$(rbenv init - zsh)"
 
 # もしかして
 # setopt correct
