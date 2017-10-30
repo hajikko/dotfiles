@@ -1,6 +1,6 @@
 # oh-my-zsh
 export ZSH="$HOME/dotfiles/oh-my-zsh"
-ZSH_THEME="avit"
+ZSH_THEME="robbyrussell"
 plugins=(git ruby bundler osx rake rails emoji-clock)
 source $ZSH/oh-my-zsh.sh
 
