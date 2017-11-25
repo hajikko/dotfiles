@@ -4,9 +4,20 @@ ZSH_THEME="robbyrussell"
 plugins=(git ruby bundler osx rake rails emoji-clock)
 source $ZSH/oh-my-zsh.sh
 
+# homebrew
+export PATH="/usr/local/sbin:$PATH"
+
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH" 
+export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init - zsh)"
+
+# phpbrew
+source $HOME/.phpbrew/bashrc
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # もしかして
 # setopt correct
@@ -55,6 +66,7 @@ alias -g gd='git diff'
 alias -g gdh='git diff @^ @'
 alias -g gcb="git co -b"
 function gud(){ git fetch --all --prune && git pull}
+alias -g gbdm='git delete-merged-branches'
 
 ## etc
 # angry
