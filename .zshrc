@@ -19,6 +19,9 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # もしかして
 # setopt correct
 unsetopt correct
@@ -49,6 +52,8 @@ function gom(){gommit-m "$*"}
 function b(){cd -;}
 function p(){cdl ~/Vagrant/"$@";}
 function g(){cdl ~/work/goalous2;}
+function syukkin(){cd ~/tools/ekakushin_cli;bundle exec bin/ekakushin_cli --in;}
+function taikin(){cd ~/tools/ekakushin_cli;bundle exec bin/ekakushin_cli --out;}
 # vim
 alias -g vgc='vim ~/.gitconfig'
 alias -g vzr='vim ~/.zshrc'
@@ -67,6 +72,9 @@ alias -g gdh='git diff @^ @'
 alias -g gcb="git co -b"
 function gud(){ git fetch --all --prune && git pull}
 alias -g gbdm='git delete-merged-branches'
+
+# secret
+alias -g beac='open https://isao.goalous.com/topics/12167/detail'
 
 ## etc
 # angry

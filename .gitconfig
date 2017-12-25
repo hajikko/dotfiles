@@ -4,6 +4,7 @@
 [core]
 	excludesfile = /Users/saeki/.gitignore
 	editor = /usr/bin/vim
+	autocrlf = input
 [color]
 	ui = true
 [alias]
@@ -15,3 +16,5 @@
 	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
 [url "git@github.com:"]
 	pushinsteadof = https://github.com/
+[push]
+	default = current
